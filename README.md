@@ -1,17 +1,29 @@
-# Bert 分类（带词权重）
+# Bert classification（with word weights）
 
-* 代码来自https://github.com/google-research/bert
-* 主要修改在run_classifier.py
-    1. 增加ChiProcessor类：https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L428
-    2. 修改分类模型：https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L658
-    3. Test时写词权重：https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L1062
+* Code from: https://github.com/google-research/bert
+* Main changes at : "run_classifier.py"
+    1. Add class "ChiProcessor" : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L428
+    2. Modify classification model : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L658
+    3. Write word weights for Test : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L1062
 
 
 ## Environment
 
-* Python 3.6.5 |Anaconda, Inc.
+* Python 3.6.5 | Anaconda, Inc.
 * tensorflow >= 1.11.0   # CPU Version of TensorFlow.
 * tensorflow-gpu  >= 1.11.0  # GPU version of TensorFlow.
+
+## Data
+
+* One line is one piece of data, Format : "$label\t$text"
+* The method of constructing data set can be seen in class "run_classifier.py"-"ChiProcessor" or `head ./data/news.train`
+
+## Hyper-parameter in *.sh
+
+* DATA_DIR : DIR of Training set、test set、validation set
+* BERT_BASE_DIR : Bert pre-train word vectors
+* CUDA_VISIBLE_DEVICES : GPU device ID
+* TRAINED_CLASSIFIER : Directory of trained models
 
 ## How to use
 
@@ -24,3 +36,6 @@
     * `bash train_eval.sh`
 * Test : 
     * `bash predict.sh`
+* Result ("./output/"): 
+    * Eval result : `eval_results.txt`
+    * Test result : `test_results.tsv`
