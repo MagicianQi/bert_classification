@@ -696,6 +696,11 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
     print("attention_score : {}".format(weight_layer.shape))
     
     output_layer = tf.reduce_sum(tf.expand_dims(attention_score, -1) * output_layer, axis=1)
+    output_layer = tf.layers.dense(
+          output_layer,
+          hidden_size,
+          activation=tf.tanh,
+          kernel_initializer=tf.truncated_normal_initializer(stddev=0.02))
     print("output_layer : {}".format(output_layer))
     
     logits = tf.matmul(output_layer, output_weights, transpose_b=True)
