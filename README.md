@@ -21,7 +21,7 @@
 ## Hyper-parameter in *.sh
 
 * DATA_DIR : DIR of Training set、test set、validation set
-* BERT_BASE_DIR : Bert pre-train word vectors
+* BERT_BASE_DIR : Bert pre-train word vectors and checkpoint
 * CUDA_VISIBLE_DEVICES : GPU device ID
 * TRAINED_CLASSIFIER : Directory of trained models
 
