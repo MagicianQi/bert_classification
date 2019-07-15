@@ -39,3 +39,5 @@
 * Result ("./output/"): 
     * Eval result : `eval_results.txt`
     * Test result : `test_results.tsv`
+* Evaluate weights:
+    * `python evaluate_weights.py`
