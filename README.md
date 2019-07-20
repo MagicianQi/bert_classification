@@ -4,7 +4,7 @@
 * Main changes at : "run_classifier.py"
     1. Add class "ChiProcessor" : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L428
     2. Modify classification model : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L658
-    3. Write word weights for Test : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L1062
+    3. Write word weights for Test : https://github.com/MagicianQi/bert_classification/blob/master/run_classifier.py#L1067
 
 
 ## Environment
