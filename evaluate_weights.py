@@ -1,9 +1,11 @@
-
+# ----------------------Parameters to modify----------------------
 t_file = open("./data/news.test", "r")
 w_file = open("./output/test_results.tsv", "r")
 o_file = open("./output/weights_result.txt", "w")
-
 seq_length = 128
+
+# ----------------------Run----------------------
+
 text_list = []
 
 for line in t_file.readlines():
