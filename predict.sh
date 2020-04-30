@@ -1,7 +1,7 @@
 export DATA_DIR=./data
 export BERT_BASE_DIR=./models/chinese_L-12_H-768_A-12
 export TRAINED_CLASSIFIER=./output
-export CUDA_VISIBLE_DEVICES=1
+export CUDA_VISIBLE_DEVICES=0
 
 python run_classifier.py \
  --task_name=chi \
